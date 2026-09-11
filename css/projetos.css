@@ -3,25 +3,44 @@
 ========================= */
 
 .projects-list-container {
-    padding: 150px 80px 100px 225px; /* Alinhamento consistente com o Sobre Mim */
-    max-width: 1400px;
-    background-color: var(--bg-dark);
+  padding: 150px 80px 100px 225px;
+  max-width: 1400px;
+  background-color: var(--bg-dark);
 }
 
 .page-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .title-line {
-    width: 1050px; /* Linha comprimida como nas outras secções */
-    height: 1px;
-    background-color: var(--text-white);
-    opacity: 0.3;
-    margin-bottom: 60px;
+  width: 100%;
+  max-width: 1050px;
+  height: 1px;
+  background-color: var(--text-white);
+  opacity: 0.3;
+  margin-bottom: 60px;
+}
+
+/* =========================
+   SEPARADOR DE CATEGORIAS
+========================= */
+
+.project-category {
+  margin-bottom: 90px;
+  width: 100%;
+}
+
+.category-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 35px;
+  text-transform: uppercase;
 }
 
 /* =========================
@@ -29,98 +48,87 @@
 ========================= */
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dois projetos lado a lado */
-    gap: 60px; /* Espaço entre as caixas */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 
 /* O "Card" ou Caixa do Projeto */
 .project-card {
-    text-decoration: none;
-    color: var(--text-white);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.4s ease;
+  text-decoration: none;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease;
 }
 
 /* Caixa onde fica o Logótipo */
 .card-image {
-    width: 100%;
-    aspect-ratio: 16 / 10; /* Proporção retangular elegante */
-    background-color: #FFFFFF; /* Fundo branco para contrastar com o logo */
-    border: 1px solid rgba(0, 0, 0, 0.05); /* Borda muito subtil */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 25px;
-    transition: all 0.4s ease;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
 }
 
 .card-image img {
-    width: 50%; /* Logótipo contido e pequeno dentro da caixa */
-    height: auto;
-    object-fit: contain;
-    opacity: 0.7;
-    transition: all 0.5s ease;
-    filter: none; 
-
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+  filter: none;
 }
 
-* Estilo específico apenas para caixas com a classe .full-image */
+/* Regras específicas para imagens totais (.full-image) */
 .card-image.full-image {
-    padding: 0; /* Remove margens internas */
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .card-image.full-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem preencher a caixa toda */
-    filter: grayscale(0%); /* Opcional: se quiseres que esta já tenha cor */
-    opacity: 1; /* Opcional: se quiseres que esta não tenha transparência */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  border: none;
+  outline: none;
 }
-
-/* Garante que o efeito de hover continua a funcionar bem */
-.project-card:hover .card-image.full-image img {
-    transform: scale(1.05);
-}
-
-/* Remove as bordas e o fundo branco para imagens que preenchem a caixa toda */
-.card-image.full-image {
-    padding: 0;
-    border: none; /* Remove a linha branca/cinza de 1px */
-    background-color: transparent; /* Remove o fundo branco de contraste */
-    box-shadow: none; /* Garante que não haja sombras a criar efeito de linha */
-}
-
-/* Garante que a imagem não tenha filtros que criem contornos */
-.card-image.full-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: none;
-    outline: none;
+/* Permite que o logótipo caiba na totalidade sem cortar o texto */
+.card-image.contain-fit img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 /* Conteúdo de Texto abaixo da caixa */
 .card-content {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .card-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .card-desc {
-    font-size: 0.95rem;
-    opacity: 0.6;
-    line-height: 1.5;
-    font-weight: 300;
+  font-size: 0.95rem;
+  opacity: 0.6;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 /* =========================
@@ -128,22 +136,29 @@
 ========================= */
 
 .project-card:hover {
-    transform: translateY(-10px); /* A caixa sobe ligeiramente */
+  transform: translateY(-10px);
 }
 
 .project-card:hover .card-image {
-    border-color: var(--accent); /* Borda ganha a cor de destaque */
-    background-color: #efede6f4;
+  border-color: var(--accent);
+  background-color: #efede6f4;
+}
+
+.project-card:hover .card-image.full-image {
+  background-color: transparent;
 }
 
 .project-card:hover .card-image img {
-    transform: scale(1.1);
-    filter: grayscale(0%); /* Logo ganha cor no hover */
-    opacity: 1;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.project-card:hover .card-image.full-image img {
+  transform: scale(1.05);
 }
 
 .project-card:hover .card-title {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* =========================
@@ -151,35 +166,20 @@
 ========================= */
 
 @media (max-width: 1100px) {
-    .projects-list-container {
-        padding: 120px 40px;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr; /* Em tablets/telemóveis fica um por baixo do outro */
-        gap: 40px;
-    }
+  .projects-list-container {
+    padding: 120px 40px;
+  }
 
-    .card-title {
-        font-size: 1.8rem;
-    }
-}
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
+  .category-title {
+    font-size: 1.9rem;
+  }
 
-
-/* Remove as bordas e o fundo branco para imagens que preenchem a caixa toda */
-.card-image.full-image {
-    padding: 0;
-    border: none; /* Remove a linha branca/cinza de 1px */
-    background-color: transparent; /* Remove o fundo branco de contraste */
-    box-shadow: none; /* Garante que não haja sombras a criar efeito de linha */
-}
-
-/* Garante que a imagem não tenha filtros que criem contornos */
-.card-image.full-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: none;
-    outline: none;
+  .card-title {
+    font-size: 1.8rem;
+  }
 }

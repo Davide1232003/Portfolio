@@ -1,0 +1,406 @@
+/* =========================
+   PROJETO - CONFIGURAÇÕES GLOBAIS
+========================= */
+
+.project-detail-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  background-color: var(--bg-dark);
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.back-to-projects {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--text-white);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.back-link .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.back-link:hover .arrow {
+  transform: translateX(-8px);
+}
+
+/* =========================
+   1. BANNER PRINCIPAL (LOGO)
+========================= */
+
+.project-banner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-card {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-card img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   2. PROJECT INFO
+========================= */
+
+.project-info {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.project-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-white);
+  margin-bottom: 10px;
+}
+
+.title-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-white);
+  opacity: 0.2;
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-item .label {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.info-item .value {
+  font-size: 0.95rem;
+  color: var(--text-white);
+  opacity: 0.8;
+}
+
+.info-description p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-white);
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.view-site-link {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--text-white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 5px;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.view-site-link:hover {
+  color: var(--accent);
+  opacity: 0.8;
+  transform: translateX(4px);
+}
+
+/* =========================
+   3. GALERIA DE DESIGN (GRELHA 2 COLUNAS)
+========================= */
+
+.project-gallery {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 0 40px 120px 40px;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.gallery-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+/* Imagens Estáticas com fundo branco */
+.gallery-item > .gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.gallery-item > .gallery-img:hover {
+  transform: translateY(-8px);
+}
+
+/* =========================
+   4. CARROSSEL COM SETAS
+========================= */
+
+.gallery-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-slider {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-slider .gallery-img {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 30px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(54, 53, 59, 0.85);
+  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.carousel-btn:hover {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  border-color: var(--accent);
+}
+
+.prev-btn {
+  left: 12px;
+}
+
+.next-btn {
+  right: 12px;
+}
+
+/* =========================
+   SECÇÃO VÍDEO PROMOCIONAL (GRELHA 2 COLUNAS)
+========================= */
+
+.project-video-section {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin-bottom: 90px;
+  box-sizing: border-box;
+}
+
+.video-section-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Tipografia e Textos */
+.video-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.video-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  color: var(--text-white);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.video-title-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-white);
+  opacity: 0.2;
+  margin-bottom: 25px;
+}
+
+.video-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-white);
+  opacity: 0.85;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* Contentor do Mockup Mobile */
+.video-player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-video-frame {
+  width: 100%;
+  max-width: 310px;
+  aspect-ratio: 9 / 16;
+  background-color: #000000;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.mobile-video-frame:hover {
+  transform: translateY(-6px);
+}
+
+.mobile-video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .video-section-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .video-text-content {
+    text-align: left;
+  }
+
+  .mobile-video-frame {
+    max-width: 270px;
+  }
+}
+
+/* =========================
+   5. RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .project-title {
+    font-size: 3rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

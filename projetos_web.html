@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projetos | Davide Cerqueira</title>
+    <title>Web | Davide Cerqueira</title>
     <link
       rel="icon"
       type="imagens/LOGOOO-02.png"
@@ -24,19 +24,27 @@
         /></a>
       </div>
       <nav class="nav-links">
-        <a href="index.html">/ HOME</a>
         <a href="sobre_mim.html">/ SOBRE MIM</a>
+        <div class="nav-dropdown">
+          <a href="projetos_web.html" class="dropdown-trigger active-link"
+            >/ PROJETOS</a
+          >
+          <div class="dropdown-menu">
+            <a href="projetos_web.html">/ WEB</a>
+            <a href="projetos_design.html">/ DESIGN</a>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main class="projects-list-container">
-      <h1 class="page-title">PROJETOS</h1>
+      <h1 class="page-title">DESENVOLVIMENTO WEB</h1>
       <div class="title-line"></div>
 
       <div class="projects-grid">
         <a href="projeto_RunClub.html" class="project-card">
           <div class="card-image">
-            <img src="imagens/Logo_FINAL.png" alt="Run Club Logo" />
+            <img src="imagens/runClub/Logo_FINAL.png" alt="Run Club Logo" />
           </div>
           <div class="card-content">
             <h2 class="card-title">Run Club Vila Real</h2>
@@ -49,7 +57,10 @@
 
         <a href="projeto_UnknownRuins.html" class="project-card">
           <div class="card-image full-image">
-            <img src="imagens/Menu.png" alt="Run Club Logo" />
+            <img
+              src="imagens/theUnknownRuins/Menu.png"
+              alt="The Unknown Ruins Logo"
+            />
           </div>
           <div class="card-content">
             <h2 class="card-title">THE Unknown Ruins</h2>
@@ -66,11 +77,12 @@
 
       <div class="projects-grid">
         <a href="projeto_RPS.html" class="project-card">
-          <div class="card-image full-image">
-            <img src="imagens/Logo RPS.png" alt="Run Club Logo" />
+          <!-- Adicionada a classe contain-fit -->
+          <div class="card-image full-image contain-fit">
+            <img src="imagens/rps/Logo RPS.png" alt="RPS Game" />
           </div>
           <div class="card-content">
-            <h2 class="card-title">RPS Game</h2>
+            <h3 class="card-title">RPS Game</h3>
             <p class="card-desc">
               Um jogo moderno de
               <strong>Pedra, Papel ou Tesoura</strong>. Focado em
@@ -81,7 +93,7 @@
         </a>
         <a href="projeto_Saltaricos.html" class="project-card">
           <div class="card-image">
-            <img src="imagens/saltaricos.png" alt="Logo Projeto" />
+            <img src="imagens/saltaricos/saltaricos.png" alt="Logo Projeto" />
           </div>
           <div class="card-content">
             <h2 class="card-title">Saltaricos do Outeiro</h2>

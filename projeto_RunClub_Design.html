@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Run Club Design | Davide Cerqueira</title>
+    <link rel="icon" type="image/png" href="imagens/LOGOOO-02.png" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/projeto_RunClub_Design.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER GLOBAL -->
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="imagens/LOGOOO-02.png" alt="Logo" class="my-logo" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="sobre_mim.html">/ SOBRE MIM</a>
+        <div class="nav-dropdown">
+          <a href="projetos_web.html" class="dropdown-trigger active-link"
+            >/ PROJETOS</a
+          >
+          <div class="dropdown-menu">
+            <a href="projetos_web.html">/ WEB</a>
+            <a href="projetos_design.html">/ DESIGN</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project-detail-container">
+      <!-- BOTÃO VOLTAR -->
+      <div class="back-to-projects">
+        <a href="projetos_design.html" class="back-link">
+          <span class="arrow">&larr;</span> VOLTAR AO DESIGN
+        </a>
+      </div>
+
+      <!-- BANNER / LOGO PRINCIPAL -->
+      <section class="project-banner">
+        <div class="banner-card">
+          <img
+            src="imagens/runClub/Logo_FINAL.png"
+            alt="Run Club Vila Real Logo"
+          />
+        </div>
+      </section>
+
+      <!-- INFORMAÇÃO DO PROJETO -->
+      <section class="project-info">
+        <h1 class="project-title">RUN CLUB VILA REAL</h1>
+        <div class="title-line"></div>
+
+        <div class="info-grid">
+          <div class="info-column">
+            <div class="info-item">
+              <span class="label">ÁREA</span>
+              <span class="value">Branding e Design de Equipamento</span>
+            </div>
+            <div class="info-item">
+              <span class="label">FERRAMENTAS</span>
+              <span class="value">Adobe Illustrator / Photoshop</span>
+            </div>
+            <div class="info-item">
+              <span class="label">ANO</span>
+              <span class="value">2026</span>
+            </div>
+          </div>
+
+          <div class="info-description">
+            <p>
+              Criação e desenvolvimento da identidade visual para o ecossistema
+              do Run Club Vila Real. O projeto teve como foco desenhar uma marca
+              atlética, moderna e fortemente enraizada na identidade local. Além
+              do logótipo principal concebido para a aplicação mobile, foram
+              desenhados os equipamentos oficiais dos atletas, englobando a
+              camisola técnica de corrida e os manguitos desportivos, mantendo
+              rigor visual e ergonomia nas aplicações têxteis.
+            </p>
+
+            <!-- LINK DO INSTAGRAM -->
+            <a
+              href="https://www.instagram.com/runclub_vilareal/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="view-site-link"
+            >
+              ↗ Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECÇÃO DO VÍDEO PROMOCIONAL COM TEXTO EXPLICATIVO -->
+      <section class="project-video-section">
+        <div class="video-section-grid">
+          <!-- COLUNA DE TEXTO / CONCEITO -->
+          <div class="video-text-content">
+            <span class="video-label">Vídeo Promocional</span>
+            <h2 class="video-title">A MARCA EM MOVIMENTO</h2>
+            <div class="video-title-line"></div>
+
+            <p class="video-desc">
+              Desenvolvido para comunicar o lançamento e a identidade visual do
+              <strong>Run Club Vila Real</strong>, este vídeo promocional
+              vertical foi pensado especificamente para plataformas mobile e
+              redes sociais (Instagram Reels e TikTok).
+            </p>
+          </div>
+
+          <!-- COLUNA DO VÍDEO (MOLDURA SMARTPHONE) -->
+          <div class="video-player-container">
+            <div class="mobile-video-frame">
+              <video
+                controls
+                preload="metadata"
+                playsinline
+                poster="imagens/DSC09156.jpg"
+              >
+                <source src="Run Club Vila Real.mp4" type="video/mp4" />
+                O teu navegador não suporta reprodução de vídeo.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIA DAS PEÇAS (Grelha 2x2) -->
+      <section class="project-gallery">
+        <div class="gallery-item">
+          <span class="gallery-label">Logótipo Oficial</span>
+          <img
+            src="imagens/runClub/Logo_FINAL.png"
+            alt="Logótipo Oficial Run Club"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Variações do Logo</span>
+          <div class="gallery-carousel-wrapper">
+            <button
+              type="button"
+              class="carousel-btn prev-btn"
+              onclick="slideGallery(this, -1)"
+              aria-label="Foto anterior"
+            >
+              &#10094;
+            </button>
+
+            <!-- Adicionada a classe light-bg -->
+            <div class="gallery-slider light-bg">
+              <img
+                src="imagens/runClub/Logo_FINAL.png"
+                alt="Logótipo Oficial"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/Assinatura Princiapal (símbolo)-02-02.png"
+                alt="Assinatura Principal"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/Assinatura Secundária (logótipo)-03.png"
+                alt="Assinatura Secundária"
+                class="gallery-img"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="carousel-btn next-btn"
+              onclick="slideGallery(this, 1)"
+              aria-label="Próxima foto"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Camisola Oficial</span>
+
+          <div class="gallery-carousel-wrapper">
+            <button
+              type="button"
+              class="carousel-btn prev-btn"
+              onclick="slideGallery(this, -1)"
+              aria-label="Foto anterior"
+            >
+              &#10094;
+            </button>
+
+            <div class="gallery-slider">
+              <img
+                src="imagens/Mockup_1_Frente.png"
+                alt="Design da Camisola Oficial - Frente"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/Mockup_1_Traseira.png"
+                alt="Design da Camisola Oficial - Costas"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/DSC09260.jpg"
+                alt="Design da Camisola Oficial - Costas"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/DSC09167.jpg"
+                alt="Design da Camisola Oficial - Costas"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/DSC09156.jpg"
+                alt="Design da Camisola Oficial - Costas"
+                class="gallery-img"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="carousel-btn next-btn"
+              onclick="slideGallery(this, 1)"
+              aria-label="Próxima foto"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Manguitos</span>
+
+          <div class="gallery-carousel-wrapper">
+            <button
+              type="button"
+              class="carousel-btn prev-btn"
+              onclick="slideGallery(this, -1)"
+              aria-label="Foto anterior"
+            >
+              &#10094;
+            </button>
+
+            <div class="gallery-slider">
+              <img
+                src="imagens/Mockup_Manguito.png"
+                alt="Design dos Manguitos - Ângulo 1"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/Manguito_foto.jpg"
+                alt="Design dos Manguitos - Ângulo 2"
+                class="gallery-img"
+              />
+              <img
+                src="imagens/DSC09322.jpg"
+                alt="Design dos Manguitos - Ângulo 2"
+                class="gallery-img"
+              />
+
+              <!-- Adiciona mais fotos se necessário -->
+            </div>
+
+            <button
+              type="button"
+              class="carousel-btn next-btn"
+              onclick="slideGallery(this, 1)"
+              aria-label="Próxima foto"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SCRIPT DO CARROSSEL DIRETAMENTE NO HTML -->
+    <script>
+      function slideGallery(button, direction) {
+        const slider = button.parentElement.querySelector(".gallery-slider");
+        const slideWidth = slider.clientWidth;
+        slider.scrollBy({
+          left: direction * slideWidth,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>

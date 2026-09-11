@@ -25,8 +25,16 @@
       </div>
 
       <nav class="nav-links">
-        <a href="index.html">/ HOME</a>
-        <a href="projetos.html">/ PROJETOS</a>
+        <a href="sobre_mim.html">/ SOBRE MIM</a>
+
+        <!-- ITEM COM SUBMENU -->
+        <div class="nav-dropdown">
+          <a href="projetos_web.html" class="dropdown-trigger">/ PROJETOS</a>
+          <div class="dropdown-menu">
+            <a href="projetos_web.html">/ WEB</a>
+            <a href="projetos_design.html">/ DESIGN</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -36,16 +44,19 @@
         <div class="title-line"></div>
 
         <p class="about-description">
-          Olá, sou o Davide Cerqueira. Sou um Desenvolvedor Web focado em criar
-          interfaces de alto impacto e soluções digitais eficientes. A minha
-          paixão reside em transformar conceitos complexos em experiências de
-          utilizador fluidas e modernas, explorando sempre novas tecnologias e
-          abordagens criativas no desenvolvimento.
+          Olá, chamo-me Davide Cerqueira tenho 23 anos e sou natural de
+          Amarante. Tenho interesse na área de desenvolvimento de software, com
+          foco principal em desenvolvimento web e front-end. Sou responsável e
+          encaro novos desafios com vontade de aprender e evoluir
+          constantemente.
+          <br />Valorizo o trabalho em equipa, e a constante partilha de
+          conhecimento. A minha paixão reside em explorar sempre novas
+          tecnologias e abordagens criativas no desenvolvimento.
         </p>
 
         <div class="download-resume">
           <a
-            href="CV.pdf"
+            href="Davide Cerqueira CV.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
@@ -59,10 +70,66 @@
       <div class="about-photo-right">
         <div class="photo-container">
           <img
-            src="imagens/eu.jpeg"
+            src="imagens/euu.jpeg"
             alt="Foto de Perfil Davide"
             class="profile-about-photo"
           />
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section-layout academic-section">
+      <div class="about-content-left">
+        <h1 class="about-title">PERCURSO ACADÉMICO</h1>
+        <div class="title-line"></div>
+
+        <div class="academic-stack">
+          <!-- ITEM UTAD COM DIPLOMA -->
+          <div class="academic-item">
+            <div class="academic-logo">
+              <img src="imagens/Logo_UTAD_Azul.png" alt="Logo Escola" />
+            </div>
+            <div class="academic-info">
+              <span class="label">ENSINO SUPERIOR</span>
+              <span class="institution"
+                >UTAD - Universidade de Trás-os-Montes e Alto Douro</span
+              >
+              <span class="course"
+                >Licenciatura em Comunicação e Multimédia</span
+              >
+            </div>
+            <span class="academic-date">2023 — 2026</span>
+
+            <!-- BOTÃO EXTERNO / LATERAL DIREITO -->
+            <div class="academic-action">
+              <a
+                href="Certificado de Licenciatura.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="diploma-badge-btn"
+                title="Ver Diploma"
+              >
+                <span>DIPLOMA</span>
+                <span class="icon">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ITEM SECUNDÁRIO -->
+          <div class="academic-item">
+            <div class="academic-logo">
+              <img src="imagens/logo_esa.png" alt="Logo Escola" />
+            </div>
+            <div class="academic-info">
+              <span class="label">ENSINO SECUNDÁRIO</span>
+              <span class="institution">Escola Secundária de Amarante</span>
+              <span class="course"
+                >Curso Profissional Técnico de Gestão de Equipamentos
+                Informáticos</span
+              >
+            </div>
+            <span class="academic-date">2019 — 2022</span>
+          </div>
         </div>
       </div>
     </section>
@@ -74,9 +141,21 @@
 
         <div class="skills-grid">
           <div class="skill-item">
+            <img src="svg/react-original.svg" alt="REACT" /><span
+              class="skill-name"
+              >REACT</span
+            >
+          </div>
+          <div class="skill-item">
             <img src="svg/javascript-original.svg" alt="JS" /><span
               class="skill-name"
-              >JAVA SCRIPt</span
+              >JAVASCRIPt</span
+            >
+          </div>
+          <div class="skill-item">
+            <img src="svg/html5-original.svg" alt="CSS" /><span
+              class="skill-name"
+              >HTML 5</span
             >
           </div>
           <div class="skill-item">
@@ -86,11 +165,18 @@
             >
           </div>
           <div class="skill-item">
-            <img src="svg/github-original.svg" alt="GitHub" /><span
+            <img src="svg/node-js-svgrepo-com.svg" alt="NODE JS" /><span
               class="skill-name"
-              >GITHUB</span
+              >NODE JS</span
             >
           </div>
+          <div class="skill-item">
+            <img src="svg/tailwind-original.svg" alt="TAILWIND CSS" /><span
+              class="skill-name"
+              >TAILWIND CSS</span
+            >
+          </div>
+
           <div class="skill-item">
             <img src="svg/php-original.svg" alt="PHP" /><span class="skill-name"
               >PHP</span
@@ -115,12 +201,7 @@
               >FLUTTER</span
             >
           </div>
-          <div class="skill-item">
-            <img src="svg/html5-original.svg" alt="CSS" /><span
-              class="skill-name"
-              >HTML 5</span
-            >
-          </div>
+
           <div class="skill-item">
             <img src="svg/visualstudio-original.svg" alt="CSS" /><span
               class="skill-name"
@@ -128,55 +209,10 @@
             >
           </div>
           <div class="skill-item">
-            <img src="" alt="REACT" /><span class="skill-name">REACT</span>
-          </div>
-          <div class="skill-item">
-            <img src="" alt="TAILWIND CSS" /><span class="skill-name"
-              >TAILWIND CSS</span
+            <img src="svg/github-original.svg" alt="GitHub" /><span
+              class="skill-name"
+              >GITHUB</span
             >
-          </div>
-          <div class="skill-item">
-            <img src="" alt="NODE JS" /><span class="skill-name">NODE JS</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section-layout academic-section">
-      <div class="about-content-left">
-        <h1 class="about-title">PERCURSO ACADÉMICO</h1>
-        <div class="title-line"></div>
-
-        <div class="academic-stack">
-          <div class="academic-item">
-            <div class="academic-logo">
-              <img src="imagens/Logo_UTAD_Azul.png" alt="Logo Escola" />
-            </div>
-            <div class="academic-info">
-              <span class="label">ENSINO SUPERIOR</span>
-              <span class="institution"
-                >UTAD - Universidade de Trás-os-Montes e Alto Douro</span
-              >
-              <span class="course"
-                >Licenciatura em Comunicação e Multimédia</span
-              >
-            </div>
-            <span class="academic-date">2023 — PRESENTE</span>
-          </div>
-
-          <div class="academic-item">
-            <div class="academic-logo">
-              <img src="imagens/logo_esa.png" alt="Logo Escola" />
-            </div>
-            <div class="academic-info">
-              <span class="label">ENSINO SECUNDÁRIO</span>
-              <span class="institution">Escola Secundária de Amarante</span>
-              <span class="course"
-                >Curso Profissional Técnico de Gestão de Equipamentos
-                Infomáticos</span
-              >
-            </div>
-            <span class="academic-date">2019 — 2022</span>
           </div>
         </div>
       </div>

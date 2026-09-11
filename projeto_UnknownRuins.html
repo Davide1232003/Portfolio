@@ -1,102 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto | Davide Cerqueira</title>
-    <link rel="icon" type="imagens/LOGOOO-02.png" href="imagens/LOGOOO-02.png">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/projeto_UnknownRuins.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link
+      rel="icon"
+      type="imagens/LOGOOO-02.png"
+      href="imagens/LOGOOO-02.png"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/projeto_UnknownRuins.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="main-header">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="imagens/LOGOOO-02.png" alt="Logo" class="my-logo">
-            </a>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="imagens/LOGOOO-02.png" alt="Logo" class="my-logo" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="sobre_mim.html">/ SOBRE MIM</a>
+        <div class="nav-dropdown">
+          <a href="projetos_web.html" class="dropdown-trigger active-link"
+            >/ PROJETOS</a
+          >
+          <div class="dropdown-menu">
+            <a href="projetos_web.html">/ WEB</a>
+            <a href="projetos_design.html">/ DESIGN</a>
+          </div>
         </div>
-        <nav class="nav-links">
-            <a href="index.html">/ HOME</a>
-            <a href="sobre_mim.html">/ SOBRE MIM</a>
-        </nav>
+      </nav>
     </header>
 
     <main class="project-detail-container">
+      <div class="back-to-projects">
+        <a href="projetos_web.html" class="back-link">
+          <span class="arrow">←</span> VOLTAR AOS PROJETOS
+        </a>
+      </div>
 
-        <div class="back-to-projects">
-            <a href="projetos.html" class="back-link">
-                <span class="arrow">←</span> VOLTAR AOS PROJETOS
-            </a>
+      <section class="project-banner">
+        <div class="banner-card">
+          <img src="imagens/theUnknownRuins/Menu.png" alt="Logo do Projeto" />
+        </div>
+      </section>
+
+      <section class="project-info">
+        <h1 class="project-title">THE Unknown Ruins</h1>
+        <div class="title-line"></div>
+
+        <div class="info-grid">
+          <div class="info-column">
+            <div class="info-item">
+              <span class="label">GÉNERO</span>
+              <span class="value">Jogo</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Linguagens Utilizadas</span>
+              <span class="value">C# | Unity 3D</span>
+            </div>
+            <div class="info-item">
+              <span class="label">ANO</span>
+              <span class="value">2025</span>
+            </div>
+          </div>
+
+          <div class="info-description">
+            <p>
+              The Unknown Ruins é um jogo 3D de ação e aventura em primeira
+              pessoa desenvolvido em Unity, onde o jogador controla um
+              explorador que desperta sem memória num complexo de ruínas
+              antigas. Ao longo de cinco níveis progressivos, o jogador resolve
+              puzzles, ativa mecanismos, evita armadilhas e enfrenta inimigos
+              com comportamentos de patrulha e deteção por som. O jogo integra
+              sistemas de sprint, agachamento, arma com mira e recarregamento,
+              power-ups temporários e progressão por chaves. O objetivo final é
+              ativar um portal misterioso e escapar das ruínas.
+            </p>
+            <a
+              href="https://github.com/Gameiro1422/Projeto-2025"
+              target="_blank"
+              class="view-site-link"
+              >↗ Código no GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-gallery">
+        <div class="gallery-item">
+          <span class="gallery-label">Nível 1: Floresta Com Ruínas</span>
+          <img
+            src="imagens/theUnknownRuins/Nível_1.png"
+            alt="Menu"
+            class="gallery-img"
+          />
         </div>
 
-        <section class="project-banner">
-            <div class="banner-card">
-                <img src="imagens/Menu.png" alt="Logo do Projeto">
-            </div>
-        </section>
+        <div class="gallery-item">
+          <span class="gallery-label">Nível 1 - Scene View</span>
+          <img
+            src="imagens/theUnknownRuins/Nível_1_unity.png"
+            alt="Perfil"
+            class="gallery-img"
+          />
+        </div>
 
-        <section class="project-info">
-            <h1 class="project-title">THE Unknown Ruins</h1>
-            <div class="title-line"></div>
+        <div class="gallery-item">
+          <span class="gallery-label">Nível 2: Prisão Abandonada</span>
+          <img
+            src="imagens/theUnknownRuins/Nível_2.png"
+            alt="Perfil"
+            class="gallery-img"
+          />
+        </div>
 
-            <div class="info-grid">
-                <div class="info-column">
-                    <div class="info-item">
-                        <span class="label">GÉNERO</span>
-                        <span class="value">Jogo</span>
-                    </div>
-                    <div class="info-item">                      
-                        <span class="label">Linguagens Utilizadas</span>
-                        <span class="value">C# | Unity 3D</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="label">ANO</span>
-                        <span class="value">2025</span>
-                    </div>
-                    
-                </div>
+        <div class="gallery-item">
+          <span class="gallery-label">Nível 3: Masmorras Abandonadas</span>
+          <img
+            src="imagens/theUnknownRuins/Nível_3.png"
+            alt="Perfil"
+            class="gallery-img"
+          />
+        </div>
 
-                <div class="info-description">
-                    <p>The Unknown Ruins é um jogo 3D de ação e aventura em primeira pessoa desenvolvido em Unity, onde o jogador controla um explorador que desperta sem memória num complexo de ruínas antigas. Ao longo de cinco níveis progressivos, o jogador resolve puzzles, ativa mecanismos, evita armadilhas e enfrenta inimigos com comportamentos de patrulha e deteção por som. O jogo integra sistemas de sprint, agachamento, arma com mira e recarregamento, power-ups temporários e progressão por chaves. O objetivo final é ativar um portal misterioso e escapar das ruínas.</p>
-                    <a href="https://github.com/Gameiro1422/Projeto-2025" target="_blank" class="view-site-link">↗ Código no GitHub</a>
-                </div>
-            </div>
-        </section>
+        <div class="gallery-item">
+          <span class="gallery-label">Inimigo</span>
+          <img
+            src="imagens/theUnknownRuins/NPC.png"
+            alt="Perfil"
+            class="gallery-img"
+          />
+        </div>
 
-        <section class="project-gallery">
-            <div class="gallery-item">
-                <span class="gallery-label">Nível 1: Floresta Com Ruínas</span>
-                <img src="imagens/Nível_1.png" alt="Menu" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <span class="gallery-label">Nível 1 - Scene View</span>
-                <img src="imagens/Nível_1_unity.png" alt="Perfil" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <span class="gallery-label">Nível 2: Prisão Abandonada</span>
-                <img src="imagens/Nível_2.png" alt="Perfil" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <span class="gallery-label">Nível 3: Masmorras Abandonadas</span>
-                <img src="imagens/Nível_3.png" alt="Perfil" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <span class="gallery-label">Inimigo</span>
-                <img src="imagens/NPC.png" alt="Perfil" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <span class="gallery-label">Inimigo - Scene View</span>
-                <img src="imagens/NPC_untiy.png" alt="Perfil" class="gallery-img">
-            </div>
-        </section>
+        <div class="gallery-item">
+          <span class="gallery-label">Inimigo - Scene View</span>
+          <img
+            src="imagens/theUnknownRuins/NPC_unity.png"
+            alt="Perfil"
+            class="gallery-img"
+          />
+        </div>
+      </section>
     </main>
-
-</body>
+  </body>
 </html>

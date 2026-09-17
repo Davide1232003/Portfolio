@@ -113,6 +113,20 @@ section:not(:first-of-type) .title-line {
   box-sizing: border-box;
 }
 
+.contact-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--accent);
+  transition: color 0.4s ease;
+}
+
 .contact-item .label {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.2rem;
@@ -129,6 +143,10 @@ section:not(:first-of-type) .title-line {
 .contact-item:hover {
   background-color: var(--text-white);
   transform: translateY(-5px);
+}
+
+.contact-item:hover .contact-icon {
+  color: var(--bg-dark);
 }
 
 .contact-item:hover .label,

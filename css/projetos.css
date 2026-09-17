@@ -53,6 +53,10 @@
   gap: 60px;
 }
 
+.projects-grid + .projects-grid {
+  margin-top: 90px;
+}
+
 /* O "Card" ou Caixa do Projeto */
 .project-card {
   text-decoration: none;

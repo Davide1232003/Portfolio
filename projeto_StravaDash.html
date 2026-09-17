@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strava Dash | Davide Cerqueira</title>
+    <meta
+      name="description"
+      content="Strava Dash: dashboard de análise de desempenho desportivo em React e Node.js, com OAuth2, gráficos e mapas de atividades do Strava."
+    />
+    <link rel="icon" type="image/png" href="imagens/LOGOOO-02.png" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/project-detail.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main class="project-detail-container">
+      <div class="back-to-projects">
+        <a href="projetos_web.html" class="back-link">
+          <span class="arrow">←</span> VOLTAR AOS PROJETOS
+        </a>
+      </div>
+
+      <section class="project-banner">
+        <div class="banner-card">
+          <img
+            src="imagens/stravaDash/Logo_StravaDash.png"
+            alt="Logo do Projeto Strava Dash"
+          />
+        </div>
+      </section>
+
+      <section class="project-info">
+        <h1 class="project-title">Strava Dash</h1>
+        <div class="title-line"></div>
+
+        <div class="info-grid">
+          <div class="info-column">
+            <div class="info-item">
+              <span class="label">GÉNERO</span>
+              <span class="value">Aplicação Web</span>
+            </div>
+            <div class="info-item">
+              <span class="label">ANO</span>
+              <span class="value">2026</span>
+            </div>
+          </div>
+
+          <div class="info-description">
+            <p>
+              Strava Dash é um dashboard de análise de desempenho desportivo que
+              consome a API oficial do Strava através de autenticação OAuth2,
+              permitindo visualizar estatísticas detalhadas de corrida e
+              ciclismo. A aplicação foi construída em React com Vite e Tailwind
+              CSS (estilo glassmorphism), utilizando Recharts para os gráficos
+              de performance, Framer Motion nas animações de interface e
+              FullCalendar para o calendário de atividades. O projeto inclui
+              ainda mapas das rotas através da Mapbox Static API e um servidor
+              Express dedicado à ponte de autenticação com o Strava. Está
+              organizado em três grandes áreas: Análise Geral (painel,
+              atividades e calendário), Performance (volume, altimetria, zonas
+              de ritmo e estatísticas) e Atleta (perfil, equipamentos, recordes
+              e segmentos).
+            </p>
+            <a
+              href="https://github.com/Davide1232003/Estagio-2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="view-site-link"
+              >↗ Código no GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="tech-stack">
+          <span class="label">TECNOLOGIAS UTILIZADAS</span>
+          <div class="tech-tags">
+            <span class="tech-tag">REACT</span>
+            <span class="tech-tag">VITE</span>
+            <span class="tech-tag">TAILWIND CSS</span>
+            <span class="tech-tag">NODE.JS</span>
+            <span class="tech-tag">EXPRESS</span>
+            <span class="tech-tag">AXIOS</span>
+            <span class="tech-tag">REACT ROUTER DOM</span>
+            <span class="tech-tag">RECHARTS</span>
+            <span class="tech-tag">FRAMER MOTION</span>
+            <span class="tech-tag">FULLCALENDAR</span>
+            <span class="tech-tag">MAPBOX API</span>
+            <span class="tech-tag">LUCIDE REACT</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-architecture">
+        <h2 class="architecture-heading">Arquitetura &amp; Engenharia</h2>
+
+        <div class="architecture-grid">
+          <div class="diagram-card">
+            <div class="diagram-frame">
+              <img
+                src="imagens/stravaDash/diagrama-autenticacao.png"
+                alt="Diagrama do fluxo de autenticação OAuth2 com o Strava"
+              />
+            </div>
+            <div class="diagram-caption">
+              <strong>Fluxo de Autenticação</strong>
+              <p>
+                O login não passa apenas pelo frontend: o React redireciona para
+                um servidor Express dedicado, que negoceia o OAuth2 com a API do
+                Strava e devolve o token à aplicação. Todos os pedidos seguintes
+                (atividades, atleta, segmentos) são feitos diretamente via Axios
+                com esse token.
+              </p>
+            </div>
+          </div>
+
+          <div class="diagram-card">
+            <div class="diagram-frame">
+              <img
+                src="imagens/stravaDash/diagrama-estrutura.png"
+                alt="Diagrama da estrutura de pastas do projeto"
+              />
+            </div>
+            <div class="diagram-caption">
+              <strong>Estrutura do Projeto</strong>
+              <p>
+                Organização por responsabilidade: páginas, componentes e hooks
+                isolados por domínio (análise geral, performance e atleta), com
+                uma camada própria de utils para formatação, ritmo e
+                estatísticas.
+              </p>
+            </div>
+          </div>
+
+          <div class="diagram-card">
+            <div class="diagram-frame">
+              <img
+                src="imagens/stravaDash/diagrama-rotas.png"
+                alt="Diagrama de proteção de rotas da aplicação"
+              />
+            </div>
+            <div class="diagram-caption">
+              <strong>Proteção de Rotas</strong>
+              <p>
+                Um <code>ProtectedRoute</code> valida o token e a sua expiração
+                antes de renderizar qualquer página autenticada, redirecionando
+                automaticamente para o login sempre que a sessão deixa de ser
+                válida.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-gallery">
+        <h2 class="gallery-section-title">Autenticação</h2>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Login</span>
+          <img
+            src="imagens/stravaDash/login.png"
+            alt="Ecrã de login com o Strava"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Logout</span>
+          <img
+            src="imagens/stravaDash/logout.png"
+            alt="Ecrã de logout"
+            class="gallery-img"
+          />
+        </div>
+
+        <h2 class="gallery-section-title">Análise Geral</h2>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Painel Principal</span>
+          <img
+            src="imagens/stravaDash/dashboard.png"
+            alt="Painel principal com métricas, recordes e metas"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Atividades</span>
+          <img
+            src="imagens/stravaDash/atividades.png"
+            alt="Lista de atividades com mapa da rota"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Calendário de Treinos</span>
+          <img
+            src="imagens/stravaDash/calendario.png"
+            alt="Calendário mensal de treinos"
+            class="gallery-img"
+          />
+        </div>
+
+        <h2 class="gallery-section-title">Performance</h2>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Volume de Treino</span>
+          <img
+            src="imagens/stravaDash/volume.png"
+            alt="Gráfico de consistência e volume de treino"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Altimetria</span>
+          <img
+            src="imagens/stravaDash/altimetria.png"
+            alt="Perfil contínuo de desnível"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Zonas de Ritmo</span>
+          <img
+            src="imagens/stravaDash/zonas-ritmo.png"
+            alt="Evolução da frequência cardíaca e eficiência"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Estatísticas</span>
+          <img
+            src="imagens/stravaDash/estatisticas.png"
+            alt="Distribuição e padrões de treino"
+            class="gallery-img"
+          />
+        </div>
+
+        <h2 class="gallery-section-title">Atleta</h2>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Perfil</span>
+          <img
+            src="imagens/stravaDash/perfil.png"
+            alt="Perfil do atleta com estatísticas anuais"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Equipamentos</span>
+          <img
+            src="imagens/stravaDash/equipamentos.png"
+            alt="Gestão de equipamentos e desgaste"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Recordes Pessoais</span>
+          <img
+            src="imagens/stravaDash/recordes.png"
+            alt="Recordes pessoais por distância"
+            class="gallery-img"
+          />
+        </div>
+
+        <div class="gallery-item">
+          <span class="gallery-label">Segmentos</span>
+          <img
+            src="imagens/stravaDash/segmentos.png"
+            alt="Lista de segmentos realizados"
+            class="gallery-img"
+          />
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/partials.js" defer></script>
+  </body>
+</html>

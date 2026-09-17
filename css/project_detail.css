@@ -1,0 +1,466 @@
+/* =========================
+   ESTRUTURA PARTILHADA DAS PÁGINAS DE PROJETO
+   (usado por todas as páginas projeto_*.html)
+========================= */
+
+.project-detail-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  background-color: var(--bg-dark);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.back-to-projects {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--text-white);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.back-link .arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+  display: inline-block;
+  transform: translateY(-1px);
+  transition: transform 0.3s ease;
+}
+
+.back-link:hover .arrow {
+  transform: translateY(-1px) translateX(-8px);
+}
+
+.back-link:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* =========================
+   1. BANNER PRINCIPAL (LOGO)
+========================= */
+
+.project-banner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-card {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-card img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   2. PROJECT INFO
+========================= */
+
+.project-info {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.project-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-white);
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.title-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-white);
+  opacity: 0.2;
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-item {
+  width: 100%;
+}
+
+.info-item .label {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.info-item .value {
+  font-size: 0.95rem;
+  color: var(--text-white);
+  opacity: 0.8;
+}
+
+.info-description p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-white);
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.view-site-link {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--text-white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 5px;
+  align-self: flex-start;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.view-site-link:hover {
+  color: var(--accent);
+  opacity: 0.85;
+  transform: translateX(4px);
+}
+
+/* Lista de tecnologias em pills, quando há demasiadas para caber
+   como texto corrido na coluna de info (mesmo estilo da homepage) */
+.tech-stack {
+  margin-top: 50px;
+}
+
+.tech-stack > .label {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: var(--text-white);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  opacity: 1;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Tecnologias dentro da coluna estreita (poucos itens) */
+.info-item .tech-tags {
+  margin-top: 6px;
+}
+
+/* Vários links de ação lado a lado (ex: GitHub + Download APK) */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.download-warning {
+  font-size: 0.85rem;
+  color: var(--text-white);
+  opacity: 0.55;
+  margin-bottom: 0 !important;
+}
+
+/* =========================
+   3. GALERIA (2 COLUNAS, POR DEFEITO)
+========================= */
+
+.project-gallery {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 40px;
+  padding: 0 40px 120px 40px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.gallery-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+/* Título de categoria dentro da galeria (ex: separar por secções da app) */
+.gallery-section-title {
+  grid-column: 1 / -1;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 15px;
+  margin: 10px 0 -20px;
+}
+
+.gallery-section-title:first-child {
+  margin-top: 0;
+}
+
+/* =========================
+   SECÇÃO DE ARQUITETURA / DIAGRAMAS TÉCNICOS
+========================= */
+
+.project-architecture {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 90px;
+  padding: 0 40px;
+}
+
+.architecture-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-white);
+  margin-bottom: 40px;
+}
+
+.architecture-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.diagram-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diagram-card .diagram-frame {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.diagram-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.diagram-card .diagram-caption strong {
+  color: var(--accent);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.diagram-card .diagram-caption p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-white);
+  opacity: 0.75;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .diagram-card .diagram-frame {
+    padding: 18px;
+  }
+}
+
+/* Variante: galeria em 3 colunas (ideal para muitos screenshots mobile) */
+.project-gallery.gallery-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.project-gallery.gallery-grid-3 .gallery-img {
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+.project-gallery.gallery-grid-3 .gallery-img:hover {
+  transform: translateY(-10px) scale(1);
+}
+
+/* =========================
+   4. RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+  .project-detail-container {
+    padding-top: 120px;
+  }
+
+  .project-gallery,
+  .project-gallery.gallery-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding-bottom: 80px;
+  }
+
+  .project-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .title-line {
+    margin: 20px auto 40px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .info-description p {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 40px;
+  }
+
+  .info-column {
+    align-items: center;
+  }
+
+  .view-site-link {
+    align-self: center;
+  }
+
+  .project-links {
+    justify-content: center;
+  }
+
+  .tech-tags {
+    justify-content: center;
+  }
+
+  .gallery-img,
+  .project-gallery.gallery-grid-3 .gallery-img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-banner {
+    margin-bottom: 40px;
+  }
+
+  .banner-card img {
+    max-width: 250px;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+}

@@ -3,40 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto | Davide Cerqueira</title>
-    <link
-      rel="icon"
-      type="imagens/LOGOOO-02.png"
-      href="imagens/LOGOOO-02.png"
+    <title>Run Club Vila Real | Davide Cerqueira</title>
+    <meta
+      name="description"
+      content="Run Club Vila Real: aplicação mobile de corrida em Flutter e Firebase, com tracking, rotas culturais e interação social."
     />
+    <link rel="icon" type="image/png" href="imagens/LOGOOO-02.png" />
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/projeto_RunClub.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="css/project-detail.css" />
   </head>
 
   <body>
-    <header class="main-header">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="imagens/LOGOOO-02.png" alt="Logo" class="my-logo" />
-        </a>
-      </div>
-      <nav class="nav-links">
-        <a href="sobre_mim.html">/ SOBRE MIM</a>
-        <div class="nav-dropdown">
-          <a href="projetos_web.html" class="dropdown-trigger active-link"
-            >/ PROJETOS</a
-          >
-          <div class="dropdown-menu">
-            <a href="projetos_web.html">/ WEB</a>
-            <a href="projetos_design.html">/ DESIGN</a>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div id="site-header"></div>
 
     <main class="project-detail-container">
       <div class="back-to-projects">
@@ -62,19 +40,24 @@
               <span class="value">Aplicação Mobile</span>
             </div>
             <div class="info-item">
-              <span class="label">Linguagens Utilizadas</span>
-              <span class="value">FLUTTER | DART | FIREBASE | GOOGLE API</span>
-            </div>
-            <div class="info-item">
               <span class="label">ANO</span>
               <span class="value">2025</span>
+            </div>
+            <div class="info-item">
+              <span class="label">TECNOLOGIAS UTILIZADAS</span>
+              <div class="tech-tags">
+                <span class="tech-tag">FLUTTER</span>
+                <span class="tech-tag">DART</span>
+                <span class="tech-tag">FIREBASE</span>
+                <span class="tech-tag">GOOGLE API</span>
+              </div>
             </div>
           </div>
 
           <div class="info-description">
             <p>
               Aplicação móvel focada na promoção da corrida e da identidade
-              local da cidade de Vila Real. Foi desesnvolvido em Flutter com
+              local da cidade de Vila Real. Foi desenvolvido em Flutter com
               integração Firebase, focada na criação de uma plataforma
               interativa para corredores. A aplicação inclui funcionalidades
               como autenticação, perfis de utilizador, chat privado, rotas
@@ -83,17 +66,29 @@
               dados em tempo real, armazenamento de informação no Firebase e
               otimização da experiência de utilização.
             </p>
-            <a
-              href="https://github.com/Gameiro1422/Projeto-2025"
-              target="_blank"
-              class="view-site-link"
-              >↗ Código no GitHub</a
-            >
+            <div class="project-links">
+              <a
+                href="https://github.com/Gameiro1422/Projeto-2025"
+                target="_blank"
+                class="view-site-link"
+                >↗ Código no GitHub</a
+              >
+              <a
+                href="https://drive.google.com/drive/folders/1YbtrzBgzz7c-meVPhbbD9lz0blmyLiGB?fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeW11pqHmKvTlITR4ZUuAAjGZuMRu0Ip3UvN_gZOsZE4Tz9UBG22VL20_aCFA_aem_nyFrTi7esBtFI28dQrhG3Q"
+                target="_blank"
+                class="view-site-link"
+              >
+                ⬇ Download
+              </a>
+            </div>
+            <p class="download-warning">
+              ⚠ Aplicação disponível apenas para Android.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="project-gallery">
+      <section class="project-gallery gallery-grid-3">
         <div class="gallery-item">
           <span class="gallery-label">LOGIN</span>
           <img
@@ -199,5 +194,9 @@
         </div>
       </section>
     </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/partials.js" defer></script>
   </body>
 </html>

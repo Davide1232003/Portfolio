@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="imagens/LOGOOO-02.png"
-      sizes="8x8"
-      href="imagens/LOGOOO-02.png"
+    <meta
+      name="description"
+      content="Portfólio de Davide Cerqueira, Web Developer focado em interfaces de alto impacto e soluções digitais eficientes."
     />
+    <meta property="og:title" content="Davide Cerqueira | Portfólio" />
+    <meta
+      property="og:description"
+      content="Web Developer focado em criar interfaces de alto impacto e soluções digitais eficientes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="imagens/LOGOOO-02.png" />
+    <link rel="icon" type="image/png" href="imagens/LOGOOO-02.png" />
     <title>Portfólio | Davide Cerqueira</title>
 
     <!-- CSS -->
@@ -16,29 +22,7 @@
     <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="main-header">
-      <div class="logo-container">
-        <img
-          src="imagens/LOGOOO-02.png"
-          alt="Logo de Davide Cerqueira"
-          class="my-logo"
-        />
-      </div>
-
-      <nav class="nav-links">
-        <a href="sobre_mim.html">/ SOBRE MIM</a>
-
-        <!-- ITEM COM SUBMENU -->
-        <div class="nav-dropdown">
-          <a href="projetos.html" class="dropdown-trigger">/ PROJETOS</a>
-          <div class="dropdown-menu">
-            <a href="projetos_web.html"> WEB</a>
-            <a href="projetos_design.html"> DESIGN</a>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div id="site-header"></div>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
@@ -48,12 +32,95 @@
             <span class="highlight-name">DAVIDE CERQUEIRA</span>
           </h1>
 
-          <p class="description">
-            Web Developer focado em criar interfaces de alto impacto e soluções
-            digitais eficientes.
+          <p class="hero-role">
+            <span id="heroRoleText"></span
+            ><span class="hero-role-cursor">|</span>
           </p>
+
+          <p class="description">
+            Web Developer licenciado em Comunicação e Multimédia, apaixonado
+            apaixonado pelo mundo digital e pelo desenvolvimento de soluções
+            web. Construo experiência entre projetos académicos e profissionais,
+            sempre com vontade de aprender mais e evoluir, pronto para o próximo
+            desafio.
+          </p>
+        </div>
+
+        <a href="#projeto-destaque" class="scroll-cue">
+          PROJETO EM DESTAQUE
+          <span class="chevron">⌄</span>
+        </a>
+      </section>
+
+      <section class="featured-project" id="projeto-destaque">
+        <div class="featured-grid">
+          <div class="featured-text">
+            <span class="featured-eyebrow">PROJETO EM DESTAQUE</span>
+            <h2 class="featured-title">
+              STRAVA <span class="light">DASH</span>
+            </h2>
+            <p class="featured-desc">
+              Dashboard de análise de desempenho desportivo que consome a API
+              oficial do Strava via OAuth2. Apresenta gráficos de performance,
+              mapas de rotas percorridas, calendário de treinos e um servidor de
+              autenticação próprio.
+            </p>
+
+            <div class="featured-tags">
+              <span class="featured-tag">REACT</span>
+              <span class="featured-tag">JAVASCRIPT</span>
+              <span class="featured-tag">TAILWIND CSS</span>
+              <span class="featured-tag">NODE.JS</span>
+              <span class="featured-tag">EXPRESS</span>
+            </div>
+
+            <a href="projeto_StravaDash.html" class="button-outline"
+              >VER PROJETO COMPLETO</a
+            >
+          </div>
+
+          <a
+            href="projeto_StravaDash.html"
+            class="browser-mockup"
+            aria-label="Ver projeto Strava Dash"
+          >
+            <div class="browser-mockup-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img
+              src="imagens/stravaDash/dashboard.png"
+              alt="Painel principal do Strava Dash"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="stats-strip">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Projetos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">12+</span>
+            <span class="stat-label">Tecnologias</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Anos de Formação</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Porto, PT</span>
+          </div>
         </div>
       </section>
     </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/partials.js" defer></script>
+    <script src="js/hero_typewriter.js" defer></script>
   </body>
 </html>
